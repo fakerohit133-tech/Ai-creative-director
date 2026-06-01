@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  ios/Runner/Info.plist
+  ─────────────────────────────────────────────────────────────────────────────
+  Required usage descriptions for camera, photos, and motion sensors.
+  The motion sensor keys are needed for the accelerometer + gyroscope streams
+  used by the complementary filter orientation module.
+-->
+<plist version="1.0">
+<dict>
+    <!-- Camera -->
+    <key>NSCameraUsageDescription</key>
+    <string>AI Creative Director uses your camera to provide real-time pose guidance and capture magazine-quality portraits.</string>
+
+    <!-- Photo library (save captured images) -->
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>AI Creative Director saves your enhanced photos to your library.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>AI Creative Director accesses your photo library to display recent captures.</string>
+
+    <!-- Motion sensors (accelerometer + gyroscope for orientation fusion) -->
+    <key>NSMotionUsageDescription</key>
+    <string>AI Creative Director uses device motion sensors to measure tilt angle and guide you to the perfect camera angle.</string>
+
+    <!-- Microphone (required by camera plugin, not used for audio) -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>The camera framework requires microphone access. AI Creative Director does not record audio.</string>
+
+    <!-- App transport / background -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>processing</string>
+    </array>
+
+    <!-- High-performance rendering -->
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
+
+    <!-- Supported orientations: portrait only -->
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+    </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
+
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
+
+    <!-- Flutter -->
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+</dict>
+</plist>

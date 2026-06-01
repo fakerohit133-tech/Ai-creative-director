@@ -1,0 +1,60 @@
+name: ai_creative_director
+description: >
+  AI Creative Director — Real-time pose guidance, scene classification,
+  sensor fusion, and magazine-quality portrait capture.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.22.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── Camera ──────────────────────────────────────────────────────────────────
+  camera: ^0.11.0+2              # Low-level camera access, raw frame callbacks
+  image: ^4.2.0                  # Pure-Dart image manipulation / post-processing
+
+  # ── AI / ML ─────────────────────────────────────────────────────────────────
+  google_mlkit_pose_detection: ^0.11.0   # On-device MediaPipe pose via ML Kit
+  google_mlkit_image_labeling: ^0.12.0   # Scene / object labeling for environment classifier
+  tflite_flutter: ^0.10.4                # TFLite runtime (GPU / NNAPI delegate support)
+  tflite_flutter_helper: ^0.3.1          # Tensor input/output utilities
+
+  # ── Sensors ─────────────────────────────────────────────────────────────────
+  sensors_plus: ^5.0.1           # Accelerometer + Gyroscope streams
+
+  # ── Haptics ─────────────────────────────────────────────────────────────────
+  vibration: ^2.0.0              # Fine-grained haptic patterns
+
+  # ── State Management ────────────────────────────────────────────────────────
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # ── Utilities ───────────────────────────────────────────────────────────────
+  vector_math: ^2.1.4            # Matrix / vector math for pose & sensor fusion
+  collection: ^1.18.0
+  async: ^2.11.0
+  equatable: ^2.0.5
+  logger: ^2.3.0
+
+  # ── UI ──────────────────────────────────────────────────────────────────────
+  flutter_animate: ^4.5.0        # Declarative animation helpers
+  google_fonts: ^6.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.9
+  riverpod_generator: ^2.4.0
+  mockito: ^5.4.4
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/
+    - assets/poses/
