@@ -1,7 +1,0 @@
-build/
-  .dart_tool/
-  .pub-cache/
-  andriod/.gradle/
-  *.apk
-  .idea/
-  .vscode/
